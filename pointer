@@ -1,0 +1,35 @@
+#define SRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+/*// *& 둘이 만나면 상쇄 됨
+// 보통 변수는 값을 가지고 있다, 포인터 변수는 주소를 가지고 있다.
+
+int main() {
+	static int i = 7, * p, ** pp;
+
+	p = &i;
+	pp = &p;
+
+	printf("p\'s Address = %p\n", p);
+	printf("pp\'s Address = %p\n", pp);
+
+	(*p)++; // 얘는 값의 변경 *p++;는 주소 변경
+	printf("i=%d \t", i);
+	printf("*p=%d \t", *p); // 포인터 p가 가리키는 곳의 값
+	printf("**pp=%d \n", **pp);
+
+	(**pp)++;
+	printf("i=%d \t", i);
+	printf("*p=%d \t", *p);
+	printf("**pp=%d \n", **pp);
+	return 0;
+}*/
+
+int main() {
+	char string[] = "Hello";
+	char* pstr = string;
+	while (*pstr) {
+		putchar(*pstr++);
+	}
+	return 0;
+}
