@@ -1,0 +1,13 @@
+#define SRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int i = 7;
+extern void func1();
+
+int main() {
+	i = 5;
+	func1();
+	i++;
+	printf("i=%d\n", i);
+	return 0;
+}
