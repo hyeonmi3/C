@@ -1,0 +1,15 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+	FILE* fp = fopen("file.txt", "w"); // w는 write모드
+	fprintf(fp, "%s %s %d", "I", "am", 17);
+	//printf("%s %s %d\n", "I", "am", 17);
+	fclose(fp);
+
+	fp = fopen("file.txt", "r"); // r는 read모드
+	char line[100];
+	fgets(line, 100, fp);
+	printf("%s", line);
+	return 0;
+}
